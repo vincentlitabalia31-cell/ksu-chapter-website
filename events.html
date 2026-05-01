@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Events & Initiatives</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- BRAND -->
+    <div class="brand">
+      <img src="images/logo.jpeg" class="logo">
+      <span>KSU Gujarat</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="membership.html">Membership</a>
+      <a href="members.html">Members</a>
+      <a href="welfare.html">Welfare</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="conduct.html">Conduct</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero events-hero">
+  <div class="overlay">
+    <h1>Events & Initiatives</h1>
+    <p>Care • Representation • Community</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="content">
+
+    <h2>Recent Chapter Activities</h2>
+
+    <div class="events-grid">
+
+      <!-- HOSPITAL -->
+      <div class="event-card-modern">
+        <img src="images/hospital.jpeg">
+        <div class="event-overlay">
+          <h3>Hospital Visit</h3>
+          <p>Members supported a fellow student during hospitalization.</p>
+        </div>
+      </div>
+
+      <!-- EMBASSY 1 -->
+      <div class="event-card-modern">
+        <img src="images/embassy1.jpeg">
+        <div class="event-overlay">
+          <h3>Embassy Visit I</h3>
+          <p>Engagement with Kenyan officials and student support discussions.</p>
+        </div>
+      </div>
+
+      <!-- EMBASSY 2 -->
+      <div class="event-card-modern">
+        <img src="images/embassy2.jpeg">
+        <div class="event-overlay">
+          <h3>Embassy Visit II</h3>
+          <p>Follow-up session on welfare and collaboration.</p>
+        </div>
+      </div>
+
+      <!-- BIKE RIDE -->
+      <div class="event-card-modern">
+        <img src="images/bikeride.jpeg">
+        <div class="event-overlay">
+          <h3>Community Bike Ride</h3>
+          <p>Members connected and relaxed through a group ride.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>What Our Activities Represent</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Support</h3>
+        <p>Standing together in times of need.</p>
+      </div>
+
+      <div class="card">
+        <h3>Representation</h3>
+        <p>Maintaining strong ties with Kenyan institutions.</p>
+      </div>
+
+      <div class="card">
+        <h3>Community</h3>
+        <p>Building friendships beyond academics.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Be Part of the Community</h2>
+  <p>Join a chapter that supports, connects, and grows together.</p>
+  <a href="membership.html" class="btn">Join Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.jpeg" class="footer-logo">
+  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
+  <p>Research Scholar Hostel G9, Gujarat University, Ahmedabad</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
+

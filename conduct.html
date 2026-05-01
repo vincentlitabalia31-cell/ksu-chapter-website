@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Code of Conduct - Kenyan Students' Chapter Gujarat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- BRAND -->
+    <div class="brand">
+      <img src="images/logo.jpeg" class="logo">
+      <span>KSU Gujarat</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="membership.html">Membership</a>
+      <a href="members.html">Members</a>
+      <a href="welfare.html">Welfare</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="conduct.html">Conduct</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero conduct-hero">
+  <div class="overlay">
+    <h1>Code of Conduct</h1>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <h2>Respectful Communication</h2>
+  <ul>
+    <li>Members must communicate professionally and respectfully</li>
+    <li>Avoid offensive language, personal attacks, or disruptive behavior</li>
+    <li>Open-ended responses are encouraged to address concerns constructively</li>
+  </ul>
+
+  <h2>Accountability & Responsibility</h2>
+  <ul>
+    <li>Members must fulfill financial obligations (kiti, merry-go-round) on time</li>
+    <li>Attend meetings regularly or inform the group of valid reasons in advance</li>
+    <li>Members are accountable for their actions in Chapter activities</li>
+  </ul>
+
+  <h2>Conflict Resolution</h2>
+  <ul>
+    <li>Conflicts should be resolved internally through discussion among members</li>
+    <li>Serious issues are escalated to the executive committee for mediation</li>
+    <li>Transparency, fairness, and confidentiality are upheld at all times</li>
+  </ul>
+
+  <h2>Ethics & Integrity</h2>
+  <ul>
+    <li>Members must act with honesty, integrity, and fairness</li>
+    <li>Misuse of welfare funds, falsifying records, or violating rules will lead to disciplinary action</li>
+    <li>Compliance with Chapter policies is mandatory</li>
+  </ul>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <img src="images/logo.jpeg" alt="Chapter Logo" class="footer-logo">
+
+    <p>© 2025 Kenyan Students’ Chapter – Gujarat University. All rights reserved.</p>
+
+    <p>
+      Address: Research Scholar Hostel G9, Gujarat University, University Campus Road,
+      Navrangpura 380009, Ahmedabad, Gujarat, India
+    </p>
+
+  </div>
+</footer>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

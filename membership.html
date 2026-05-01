@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Membership & Induction</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- BRAND -->
+    <div class="brand">
+      <img src="images/logo.jpeg" class="logo">
+      <span>KSU Gujarat</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="membership.html">Membership</a>
+      <a href="members.html">Members</a>
+      <a href="welfare.html">Welfare</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="conduct.html">Conduct</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero membership-hero">
+  <div class="overlay">
+    <h1>Membership & Induction</h1>
+    <p>Join • Contribute • Grow</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="content">
+
+    <h2>Eligibility</h2>
+    <div class="card">
+      <ul>
+        <li>Must be a Kenyan student enrolled in a university in Gujarat State</li>
+        <li>Must agree to abide by Chapter policies and code of conduct</li>
+      </ul>
+    </div>
+
+    <h2>Membership Contributions</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Registration Fee</h3>
+        <p>INR 500 (one-time)</p>
+      </div>
+
+      <div class="card">
+        <h3>Monthly Kiti</h3>
+        <p>INR 500 per month</p>
+      </div>
+
+      <div class="card">
+        <h3>Merry-go-round</h3>
+        <p>INR 1500 rotational contribution</p>
+      </div>
+    </div>
+
+    <h2>Joining Process</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <h3>1. Register</h3>
+        <p>Fill the New Member Registration Form</p>
+      </div>
+
+      <div class="step">
+        <h3>2. Submit Details</h3>
+        <p>Name, program, email, contact, arrival date</p>
+      </div>
+
+      <div class="step">
+        <h3>3. Confirmation</h3>
+        <p>Await approval from Secretary and Treasurer</p>
+      </div>
+
+      <div class="step">
+        <h3>4. Orientation</h3>
+        <p>Attend welcome and induction session</p>
+      </div>
+
+    </div>
+
+    <h2>Member Responsibilities</h2>
+
+    <div class="card">
+      <ul>
+        <li>Fulfill all financial obligations on time</li>
+        <li>Participate in Chapter activities and meetings</li>
+        <li>Maintain respectful communication with members</li>
+      </ul>
+    </div>
+
+    <h2>Exit / Withdrawal Policy</h2>
+
+    <div class="card">
+      <ul>
+        <li>Members must clear all dues before exiting</li>
+        <li>Provide at least <strong>2 months’ notice</strong></li>
+        <li>Receive <strong>80% of kiti share</strong> (adjusted for expenses)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Join?</h2>
+  <p>Become part of a supportive Kenyan student community in Gujarat.</p>
+  <a href="#" class="btn">Register Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.jpeg" class="footer-logo">
+  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
+  <p>Research Scholar Hostel G9, Gujarat University, Ahmedabad</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
+

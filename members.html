@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Members Portal</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- BRAND -->
+    <div class="brand">
+      <img src="images/logo.jpeg" class="logo">
+      <span>KSU Gujarat</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="membership.html">Membership</a>
+      <a href="members.html">Members</a>
+      <a href="welfare.html">Welfare</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="conduct.html">Conduct</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero members-hero">
+  <div class="overlay">
+    <h1>Members Portal</h1>
+    <p>Secure • Transparent • Organized</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="content">
+
+    <h2>Internal Resources</h2>
+
+    <div class="members-grid">
+
+      <!-- FINANCIAL RECORDS -->
+      <div class="members-card">
+        <h3>Financial Records</h3>
+        <p>Kiti contributions, merry-go-round schedules, and loan records.</p>
+        <a href="https://docs.google.com/spreadsheets/d/12ZVNBaxEXEIArWZuAVJQEi-ySYBcfPyc/edit?gid=532733596#gid=532733596" class="btn">View Records</a>
+      </div>
+
+      <!-- ATTENDANCE -->
+      <div class="members-card">
+        <h3>Attendance Logs</h3>
+        <p>Track meeting attendance, fines, and participation.</p>
+        <a href="https://www.appsheet.com/start/903eaafb-d66a-4bdc-9a9e-8adc14f3e2f3" class="btn">View Logs</a>
+      </div>
+
+      <!-- EVENT REPORTS -->
+      <div class="members-card">
+        <h3>Event Reports</h3>
+        <p>Fundraising summaries, event expenses, and documentation.</p>
+        <a href="https://www.appsheet.com/start/6826dfe5-a009-43d9-9211-d10faab7c8ac?platform=desktop#appName=ChapterEventReportEntryResponses-333505949&vss=H4sIAAAAAAAAA62PPQvCMBRF_4rcOYtrVlEQ0UHFxTjE5hWCbVL6UrWE_HdTPxAc1fHdyzncF3G2dNkEXZwg9_F9LaiHRFTY9g0pSIWJd6H1lYJQWOn6Ec58W4_WxI13TDwaKySkg3h5AjFk_E4j_7NGwBpywZaW2sE5GLLryed6oHPwySIJ1F3Qx4ruj2Q2pZyVvuiYzC5P-2ESz9302mhnlt5kdakrpnQDxK1t140BAAA=&view=Form%20Responses%201" class="btn">View Reports</a>
+      </div>
+
+      <!-- FORMS -->
+      <div class="members-card">
+        <h3>Official Templates</h3>
+        <p>Loan forms, registration forms, and approval documents.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeflSEudHsrUFVN_MA8oGxEiFZ1rZHciAGdN31oVwb6xwbHsg/viewform?usp=header" class="btn">Access Forms</a>
+      </div>
+
+    </div>
+
+    <h2>Access Guidelines</h2>
+
+    <div class="card">
+      <ul>
+        <li>Only active members are granted access</li>
+        <li>Files are hosted on Google Drive with restricted permissions</li>
+        <li>Access is approved by the President, Secretary, or Treasurer</li>
+        <li>Members must log in using authorized Google accounts</li>
+      </ul>
+    </div>
+
+    <h2>Security & Confidentiality</h2>
+
+    <div class="card">
+      <ul>
+        <li>Do not share links publicly</li>
+        <li>Financial records are view-only for most members</li>
+        <li>Edit access is restricted to authorized officers</li>
+        <li>Updates are communicated via WhatsApp or email</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Members Only Access</h2>
+  <p>This section is restricted to active Chapter members.</p>
+  <a href="membership.html" class="btn">Become a Member</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.jpeg" class="footer-logo">
+  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
+  <p>Ahmedabad, Gujarat, India</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
+

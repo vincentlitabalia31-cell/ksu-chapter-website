@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Welfare & Financial Policy</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- BRAND -->
+    <div class="brand">
+      <img src="images/logo.jpeg" class="logo">
+      <span>KSU Gujarat</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="membership.html">Membership</a>
+      <a href="members.html">Members</a>
+      <a href="welfare.html">Welfare</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="conduct.html">Conduct</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero welfare-hero">
+  <div class="overlay">
+    <h1>Welfare & Financial Policy</h1>
+    <p>Transparency • Responsibility • Support</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="content">
+
+    <h2>Purpose of the Welfare Fund</h2>
+    <div class="card">
+      <p>
+        The welfare fund supports Chapter activities and member welfare initiatives. 
+        It is not a personal savings account, but a shared resource used responsibly 
+        for the collective benefit of all members.
+      </p>
+    </div>
+
+    <h2>Monthly Contributions</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Kiti (Savings Pool)</h3>
+        <p>INR 500 per member per month.</p>
+      </div>
+
+      <div class="card">
+        <h3>Merry-go-round</h3>
+        <p>INR 1500 rotational contribution system among members.</p>
+      </div>
+
+      <div class="card">
+        <h3>Start Period</h3>
+        <p>Contributions begin in October. New members join the next cycle.</p>
+      </div>
+
+    </div>
+
+    <h2>Loans</h2>
+    <div class="card">
+      <ul>
+        <li>Members may request loans from the welfare fund</li>
+        <li>Interest rate starts at <strong>12.5%</strong> (adjustable)</li>
+        <li>Must be an active member in good standing</li>
+        <li>Approval is based on committee evaluation</li>
+      </ul>
+    </div>
+
+    <h2>Expenditures</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Events</h3>
+        <p>Funding for gatherings such as Diwali parties and end-year events.</p>
+      </div>
+
+      <div class="card">
+        <h3>New Students</h3>
+        <p>Airport pickups, meals, and initial support.</p>
+      </div>
+
+      <div class="card">
+        <h3>Other Initiatives</h3>
+        <p>Approved Chapter programs and activities.</p>
+      </div>
+
+    </div>
+
+    <h2>Transparency & Record Keeping</h2>
+    <div class="card">
+      <ul>
+        <li>Treasurer maintains financial records in Google Sheets</li>
+        <li>Only authorized officers have edit access</li>
+        <li>Members can view summarized reports securely</li>
+      </ul>
+    </div>
+
+    <h2>Fines & Compliance</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Late Payment</h3>
+        <p>INR 100 fine</p>
+      </div>
+
+      <div class="card">
+        <h3>Absenteeism</h3>
+        <p>INR 200 fine (without valid reason)</p>
+      </div>
+
+      <div class="card">
+        <h3>Notice Requirement</h3>
+        <p>Members must inform 1 day prior unless in emergencies</p>
+      </div>
+
+    </div>
+
+    <h2>Members Only Section</h2>
+    <div class="card">
+      <p>
+        Active members can access financial records, loan logs, and attendance data 
+        through secure Google Drive links with restricted permissions.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Transparency Builds Trust</h2>
+  <p>Our welfare system ensures fairness, accountability, and support for all members.</p>
+  <a href="membership.html" class="btn">Join the Chapter</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.jpeg" class="footer-logo">
+  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
+  <p>Research Scholar Hostel G9, Gujarat University, Ahmedabad</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Meetings, Attendance & Discipline</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- BRAND -->
+    <div class="brand">
+      <img src="images/logo.jpeg" class="logo">
+      <span>KSU Gujarat</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="membership.html">Membership</a>
+      <a href="members.html">Members</a>
+      <a href="welfare.html">Welfare</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="conduct.html">Conduct</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero meetings-hero">
+  <div class="overlay">
+    <h1>Meetings & Discipline</h1>
+    <p>Structure • Accountability • Commitment</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="content">
+
+    <h2>Meeting Schedule</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>When</h3>
+        <p>Last Sunday of every month</p>
+      </div>
+
+      <div class="card">
+        <h3>Time</h3>
+        <p>5:00 PM</p>
+      </div>
+
+      <div class="card">
+        <h3>Grace Period</h3>
+        <p>30 minutes (after which fines apply)</p>
+      </div>
+    </div>
+
+    <h2>Attendance Rules</h2>
+
+    <div class="card">
+      <ul>
+        <li>Members are expected to attend all meetings regularly</li>
+        <li>Absence must be communicated at least <strong>1 day prior</strong></li>
+        <li>Emergencies are considered exceptions</li>
+        <li>“Personal reasons” do not automatically exempt fines</li>
+        <li>A trusted member may privately request an excuse on your behalf</li>
+      </ul>
+    </div>
+
+    <h2>Fines & Penalties</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Late Arrival</h3>
+        <p>INR 100</p>
+      </div>
+
+      <div class="card">
+        <h3>Absenteeism</h3>
+        <p>INR 200 (without valid reason)</p>
+      </div>
+
+      <div class="card">
+        <h3>Payment</h3>
+        <p>Fines must be paid promptly to the Treasurer</p>
+      </div>
+
+    </div>
+
+    <h2>Special Considerations</h2>
+
+    <div class="card">
+      <p>
+        Members facing genuine challenges (such as long distance or unavoidable circumstances) 
+        may be granted flexibility upon committee approval.
+      </p>
+      <p>
+        Example: Members like Kurgat have previously been granted flexibility due to distance.
+      </p>
+    </div>
+
+    <h2>Respectful Communication</h2>
+
+    <div class="card">
+      <ul>
+        <li>All communication must remain respectful and professional</li>
+        <li>Avoid offensive language or emotional outbursts</li>
+        <li>Constructive and open-ended discussions are encouraged</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Commitment Builds Strong Communities</h2>
+  <p>Regular attendance and discipline ensure the success of our Chapter.</p>
+  <a href="membership.html" class="btn">Become a Member</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.jpeg" class="footer-logo">
+  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
+  <p>Research Scholar Hostel G9, Gujarat University, Ahmedabad</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>

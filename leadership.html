@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Leadership | Kenyan Students Gujarat</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- BRAND -->
+    <div class="brand">
+      <img src="images/logo.jpeg" class="logo">
+      <span>KSU Gujarat</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="membership.html">Membership</a>
+      <a href="members.html">Members</a>
+      <a href="welfare.html">Welfare</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="conduct.html">Conduct</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero leadership-hero">
+  <div class="overlay">
+    <h1>Executive Leadership</h1>
+    <p>2024 / 2025 Cohort</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="content">
+
+    <h2>Executive Committee</h2>
+
+    <div class="grid">
+
+      <div class="card profile-card">
+        <img src="images/kevin.jpeg" class="profile-img">
+        <h3>Kevin Aridi Musungu</h3>
+        <p><strong>President</strong></p>
+        <p>Provides overall leadership, chairs meetings, and represents the Chapter.</p>
+      </div>
+
+      <div class="card profile-card">
+        <img src="images/caroline.jpeg" class="profile-img">
+        <h3>Caroline Gatwiri</h3>
+        <p><strong>Vice Chair</strong></p>
+        <p>Supports operations, ensures inclusivity, and coordinates projects.</p>
+      </div>
+
+      <div class="card profile-card">
+        <img src="images/vincent.jpeg" class="profile-img">
+        <h3>Vincent Litabalia</h3>
+        <p><strong>Secretary</strong></p>
+        <p>Manages communication, records, and coordination.</p>
+      </div>
+
+      <div class="card profile-card">
+        <img src="images/nessy.jpeg" class="profile-img">
+        <h3>Nessy Mputhia</h3>
+        <p><strong>Treasurer</strong></p>
+        <p>Handles finances, welfare fund, and reporting.</p>
+      </div>
+
+      <div class="card profile-card">
+        <img src="images/teddy.jpeg" class="profile-img">
+        <h3>Teddy Charo</h3>
+        <p><strong>Compliance Officer</strong></p>
+        <p>Ensures adherence to rules and accountability.</p>
+      </div>
+
+    </div>
+
+    <h2>Roles & Responsibilities</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Leadership</h3>
+        <p>Providing direction, decision-making, and representation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Administration</h3>
+        <p>Managing communication, records, and coordination.</p>
+      </div>
+
+      <div class="card">
+        <h3>Financial Oversight</h3>
+        <p>Ensuring transparency in all financial matters.</p>
+      </div>
+
+      <div class="card">
+        <h3>Compliance</h3>
+        <p>Maintaining discipline and adherence to Chapter policies.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Join a Strong Leadership Network</h2>
+  <p>Be part of an organized and impactful student community.</p>
+  <a href="membership.html" class="btn">Join Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.jpeg" class="footer-logo">
+  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
+  <p>Research Scholar Hostel G9, Gujarat University, Ahmedabad</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
+
