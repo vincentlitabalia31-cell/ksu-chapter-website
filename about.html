@@ -10,7 +10,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <title>About Us | Kenyan Students Gujarat</title>
+  <title>About | Kenyan Students' Chapter Gujarat</title>
 </head>
 
 <body>
@@ -19,11 +19,11 @@
 <nav class="navbar">
   <div class="nav-container">
 
-    <!-- BRAND -->
-    <div class="brand">
-      <img src="images/logo.jpeg" class="logo">
+    <!-- BRAND (CLICKABLE) -->
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpeg" class="logo" alt="KSU Gujarat Logo">
       <span>KSU Gujarat</span>
-    </div>
+    </a>
 
     <!-- NAV LINKS -->
     <div class="nav-links">
@@ -41,11 +41,12 @@
 
   </div>
 </nav>
+
 <!-- HERO -->
 <section class="hero about-hero">
   <div class="overlay">
     <h1>About the Chapter</h1>
-    <p>Unity, Welfare, and Leadership</p>
+    <p>Unity &bull; Welfare &bull; Leadership</p>
   </div>
 </section>
 
@@ -114,11 +115,12 @@
 
 <!-- FOOTER -->
 <footer>
-  <img src="images/logo.jpeg" class="footer-logo">
-  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
-  <p>Research Scholar Hostel G9, Gujarat University, Ahmedabad</p>
+  <img src="images/logo.jpeg" class="footer-logo" alt="KSU Gujarat Logo">
+  <p>&copy; 2025 Kenyan Students' Chapter - Gujarat University</p>
+  <p>Ahmedabad, Gujarat, India</p>
 </footer>
 
+<!-- ACTIVE LINK SCRIPT -->
 <script>
   const links = document.querySelectorAll(".nav-links a");
   const currentPage = window.location.pathname.split("/").pop();
@@ -134,4 +136,3 @@
 
 </body>
 </html>
-

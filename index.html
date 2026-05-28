@@ -3,26 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Kenyan Students' Chapter Gujarat</title>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-container">
-
-    <!-- BRAND -->
-    <div class="brand">
-      <img src="images/logo.jpeg" class="logo">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpeg" class="logo" alt="KSU Gujarat Logo">
       <span>KSU Gujarat</span>
-    </div>
+    </a>
 
-    <!-- NAV LINKS -->
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -35,113 +30,103 @@
       <a href="events.html">Events</a>
       <a href="contact.html">Contact</a>
     </div>
-
   </div>
 </nav>
-<!-- HERO -->
+
 <section class="hero home-hero">
   <div class="overlay">
     <div>
+      <span class="hero-kicker">Kenyan Students' Union - Gujarat</span>
       <h1>Kenyan Students in Gujarat</h1>
-      <p>Building community, support, and leadership among Kenyan students in Gujarat State</p>
-      <a href="#about" class="btn">Learn More</a>
+      <p>Building community, support, and leadership among Kenyan students across Gujarat State.</p>
+      <div class="hero-actions">
+        <a href="membership.html" class="btn">Become a Member</a>
+        <a href="#about" class="btn secondary">Explore Chapter</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT PREVIEW -->
 <section id="about" class="section">
-  <div class="content">
-    <h2>About Our Chapter</h2>
-    <p>
-      The Kenyan Students' Chapter in Gujarat brings together students across universities
-      to build a strong, supportive, and vibrant community. We focus on welfare,
-      leadership, and cultural unity.
-    </p>
+  <div class="content intro-panel">
+    <div class="intro-copy">
+      <span class="section-label">About Our Chapter</span>
+      <h2>A home base for Kenyan students studying in Gujarat.</h2>
+      <p class="lead">
+        The Kenyan Students' Chapter in Gujarat brings together students across universities
+        to build a strong, supportive, and vibrant community.
+      </p>
+      <p>
+        We focus on welfare, leadership, accountability, cultural unity, and practical support
+        for students navigating life and study away from home.
+      </p>
+    </div>
+    <div class="feature-media home" aria-hidden="true"></div>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="section light">
   <div class="content">
-    <h2>What We Do</h2>
+    <span class="section-label">What We Do</span>
+    <h2>Organized support, transparent systems, real community.</h2>
 
     <div class="grid">
-
       <div class="card">
-        <h3>🎓 Student Support</h3>
-        <p>Helping new and existing students settle and succeed.</p>
+        <span class="icon-badge">01</span>
+        <h3>Student Support</h3>
+        <p>Helping new and existing students settle, connect, and succeed in Gujarat.</p>
       </div>
 
       <div class="card">
-        <h3>💰 Welfare Fund</h3>
-        <p>Financial and social support through structured contributions.</p>
+        <span class="icon-badge">02</span>
+        <h3>Welfare Fund</h3>
+        <p>Financial and social support through structured contributions and clear reporting.</p>
       </div>
 
       <div class="card">
-        <h3>🎉 Events & Culture</h3>
-        <p>Celebrating Kenyan culture and hosting community events.</p>
+        <span class="icon-badge">03</span>
+        <h3>Events & Culture</h3>
+        <p>Celebrating Kenyan culture and hosting community events that keep members connected.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- EVENTS PREVIEW -->
 <section class="section">
   <div class="content">
-    <h2>Recent Activities</h2>
+    <span class="section-label">Recent Activities</span>
+    <h2>Chapter life in motion.</h2>
 
     <div class="grid">
-
       <div class="card">
         <h3>Orientation</h3>
-        <p>Welcoming new students with guidance and support.</p>
+        <p>Welcoming new students with guidance, practical help, and peer support.</p>
       </div>
 
       <div class="card">
         <h3>National Celebrations</h3>
-        <p>Independence Day and cultural events.</p>
+        <p>Gathering for independence celebrations, cultural moments, and shared milestones.</p>
       </div>
 
       <div class="card">
         <h3>Community Meetups</h3>
-        <p>Monthly meetings and bonding sessions.</p>
+        <p>Monthly meetings and bonding sessions that keep the chapter coordinated.</p>
       </div>
-
     </div>
-
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
   <h2>Join the Community</h2>
   <p>Be part of a strong Kenyan student network in Gujarat.</p>
   <a href="membership.html" class="btn">Become a Member</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <img src="images/logo.jpeg" class="footer-logo">
-  <p>© 2025 Kenyan Students’ Chapter – Gujarat University</p>
+  <img src="images/logo.jpeg" class="footer-logo" alt="KSU Gujarat Logo">
+  <p>&copy; 2025 Kenyan Students' Chapter - Gujarat University</p>
 </footer>
 
 <script src="script.js"></script>
-
-<script>
-  const links = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop();
-
-  links.forEach(link => {
-    const linkPage = link.getAttribute("href");
-
-    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
-      link.classList.add("active");
-    }
-  });
-</script>
-
 </body>
 </html>
-

@@ -1,74 +1,58 @@
-```javascript id="js8x2p"
-// ===============================
-// Kenyan Students Chapter Script
-// ===============================
-
-// Confirm site is loaded
 window.addEventListener("load", () => {
-  console.log("Kenyan Students Chapter Website Loaded Successfully");
+  document.body.classList.add("site-loaded");
 });
 
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const targetId = anchor.getAttribute("href");
+    if (!targetId || targetId.length <= 1) return;
 
-// Smooth scroll for anchor links (if you add #sections later)
-document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href");
+    const target = document.querySelector(targetId);
+    if (!target) return;
 
-    if (targetId.length > 1) {
-      e.preventDefault();
-      const target = document.querySelector(targetId);
-
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
-    }
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth" });
   });
 });
 
+const navLinks = document.querySelectorAll(".nav-links a");
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-// Simple alert example (can reuse anywhere)
-function showMessage(message) {
-  alert(message);
-}
-
-
-// Example future use:
-// <button onclick="showMessage('Welcome to the Chapter!')">Click</button>
-
-
-// Highlight active page in navbar (basic)
-const links = document.querySelectorAll(".navbar a");
-const currentPage = window.location.pathname.split("/").pop();
-
-links.forEach(link => {
+navLinks.forEach((link) => {
   if (link.getAttribute("href") === currentPage) {
-    link.style.color = "#00ffcc";
+    link.classList.add("active");
   }
 });
-```
-const faders = document.querySelectorAll('.fade-in');
 
-const appearOptions = {
-  threshold: 0.2
-};
+const faders = document.querySelectorAll(".fade-in");
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('show');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
+if ("IntersectionObserver" in window) {
+  const appearOnScroll = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+  faders.forEach((fader) => appearOnScroll.observe(fader));
+} else {
+  faders.forEach((fader) => fader.classList.add("show"));
+}
+
+function showMessage(message) {
+  window.alert(message);
+}
+
 function scrollCarousel(direction) {
-  const carousel = document.getElementById('carousel');
+  const carousel = document.getElementById("carousel");
+  if (!carousel) return;
+
   carousel.scrollBy({
     left: direction * 300,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
