@@ -95,6 +95,107 @@
 
     </div>
 
+    <section class="community-journey fade-in" aria-labelledby="community-journey-title">
+      <div class="story-heading">
+        <span class="section-label">Shared Experiences</span>
+        <h2 id="community-journey-title">Community Journey</h2>
+        <p class="lead">A collection of meaningful moments that reflect the shared experiences, growth, and connections within our welfare community.</p>
+      </div>
+
+      <div class="journey-timeline" aria-label="Community journey milestones">
+        <article class="journey-moment">
+          <div class="journey-image">
+            <img src="images/embassy1.jpeg" alt="Kenyan students attending an embassy visit for representation and support" loading="lazy" decoding="async">
+          </div>
+          <div class="journey-copy">
+            <span>Representation</span>
+            <h3>Embassy Visits</h3>
+            <p>Beginnings of the international journey, strengthened through conversations, guidance, and institutional connection.</p>
+          </div>
+        </article>
+
+        <article class="journey-moment">
+          <div class="journey-image">
+            <img src="images/hospital.jpeg" alt="Community members visiting and supporting a fellow student in hospital" loading="lazy" decoding="async">
+          </div>
+          <div class="journey-copy">
+            <span>Care</span>
+            <h3>Hospital Visits</h3>
+            <p>Moments of resilience where members show up with practical support, compassion, and steady presence.</p>
+          </div>
+        </article>
+
+        <article class="journey-moment is-wide">
+          <div class="journey-image">
+            <img src="images/bikeride.jpeg" alt="Community members bonding during a group bike ride" loading="lazy" decoding="async">
+          </div>
+          <div class="journey-copy">
+            <span>Friendship</span>
+            <h3>Bike Rides & Lifestyle</h3>
+            <p>Friendships grow through relaxed days, shared movement, and the small experiences that make life away from home feel connected.</p>
+          </div>
+        </article>
+
+        <article class="journey-moment">
+          <div class="journey-image">
+            <img src="images/celebrating-together.jpeg" alt="Graduating and non-graduating members celebrating together as a community" loading="lazy" decoding="async">
+          </div>
+          <div class="journey-copy">
+            <span>Achievement</span>
+            <h3>Graduation Milestones</h3>
+            <p>Graduation is one meaningful highlight within a wider story of support, belonging, and shared progress.</p>
+          </div>
+        </article>
+
+        <article class="journey-moment">
+          <div class="journey-image">
+            <img src="images/embassy2.jpeg" alt="Community members gathered during a follow-up embassy session" loading="lazy" decoding="async">
+          </div>
+          <div class="journey-copy">
+            <span>Community</span>
+            <h3>Shared Experiences</h3>
+            <p>Together, we have shared experiences that reflect growth, resilience, friendship, and achievement across many moments of our journey as a community.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="member-spotlight fade-in" aria-labelledby="annastacia-title">
+      <div class="spotlight-media">
+        <img src="images/annastacia-ninoh.jpeg" alt="Portrait of Annastacia Ninoh, welfare member and graduate" loading="lazy" decoding="async">
+      </div>
+      <div class="spotlight-copy">
+        <span class="section-label">Member Spotlight</span>
+        <h2 id="annastacia-title">Annastacia Ninoh</h2>
+        <p class="spotlight-role">Welfare Member &amp; Graduate</p>
+        <blockquote>
+          "Being far from home wasn't always easy, but this welfare became more than a community to me&mdash;it became family. Through every challenge and every success, I found people who supported, encouraged, and believed in me. As I celebrate my graduation today, I'm grateful not only for the degree I've earned but also for the friendships and sense of belonging I've gained along the way. This family made a foreign country feel like home."
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="celebration-feature fade-in" aria-labelledby="celebrating-title">
+      <div class="celebration-copy">
+        <span class="section-label">Shared Joy</span>
+        <h2 id="celebrating-title">Celebrating Together</h2>
+        <p>Our celebration was made even more special by the presence of both graduating and non-graduating members. It was a beautiful reminder that our welfare is more than an organization&mdash;it is a family. We celebrate achievements, friendships, support, and the sense of belonging that connects us all.</p>
+      </div>
+      <div class="celebration-media">
+        <img src="images/celebrating-together.jpeg" alt="Graduating and non-graduating members celebrating together" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="community-moment fade-in" aria-labelledby="conversations-title">
+      <div class="moment-media">
+        <img src="images/conversations-beyond-celebration.jpeg" alt="Members relaxing and talking after dinner" loading="lazy" decoding="async">
+      </div>
+      <div class="moment-copy">
+        <span class="section-label">Everyday Belonging</span>
+        <h2 id="conversations-title">Conversations Beyond the Celebration</h2>
+        <p>Some of the best moments aren't on the stage or in the spotlight. After the celebration dinner, members gathered to relax, reflect, and enjoy each other's company. These simple conversations and shared experiences are what transform a community into lasting friendships.</p>
+      </div>
+    </section>
+
     <h2>What Our Activities Represent</h2>
 
     <div class="grid">
@@ -144,6 +245,25 @@
       link.classList.add("active");
     }
   });
+
+  const faders = document.querySelectorAll(".fade-in");
+
+  if ("IntersectionObserver" in window) {
+    const appearOnScroll = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    faders.forEach((fader) => appearOnScroll.observe(fader));
+  } else {
+    faders.forEach((fader) => fader.classList.add("show"));
+  }
 </script>
 
 </body>
